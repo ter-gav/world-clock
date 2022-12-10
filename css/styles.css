@@ -3,15 +3,53 @@ body {
   text-align: center;
 }
 
+h1 {
+  padding-top: 30px;
+}
+
 select {
-  margin: 20px;
+  margin: 30px 20px;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+
+.container {
+  margin-top: 50px;
+  padding: 50px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  max-width: 1000px;
+  border-radius: 4px;
+}
+
+.clock-city {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.monument img {
+  width: 100%;
+  padding: 10px;
+}
+
+.clocks {
+  margin: 0 auto;
+  max-width: 800px;
+  justify-content: space-between;
+}
+
+.col-3 {
+  background: linear-gradient(
+    170deg,
+    rgb(220, 242, 199) 0%,
+    rgb(139, 102, 241) 100%
+  );
+  margin: 0 4px;
+  max-width: 190px;
+  padding-top: 50px;
+  padding-bottom: 5px;
 }
 
 footer {
   padding: 30px;
-}
-
-.row {
-  margin: 0 auto;
-  max-width: 800px;
 }
