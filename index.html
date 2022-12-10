@@ -13,6 +13,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/css/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.39/moment-timezone-with-data-1970-2030.js"></script>
     <title>World Clock Project</title>
   </head>
   <body>
@@ -28,7 +30,7 @@
         </select>
       </div>
       <div class="row clocks">
-        <div class="col-3">
+        <div class="col-3" id="new-york">
           <div class="time">14:59</div>
           <div class="date">December 4th, 2022</div>
           <div class="clock-city">New York</div>
@@ -36,7 +38,7 @@
             <img src="/images/statue-of-liberty.png" />
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-3" id="london">
           <div class="time">19:59</div>
           <div class="date">December 4th, 2022</div>
           <div class="clock-city">London</div>
@@ -45,7 +47,7 @@
           </div>
         </div>
 
-        <div class="col-3">
+        <div class="col-3" id="berlin">
           <div class="time">20:59</div>
           <div class="date">December 4th, 2022</div>
           <div class="clock-city">Berlin</div>
@@ -53,7 +55,7 @@
             <img src="/images/brandenburg-gate.png" />
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-3" id="toronto">
           <div class="time">04:59</div>
           <div class="date">December 4th, 2022</div>
           <div class="clock-city">Toronto</div>
