@@ -45,8 +45,6 @@ function updateCity(event) {
     cityImage = cityTimeZone.split("/")[1].toLowerCase();
   }
 
-  /*cityTimeZone.split("/")[1].toLowerCase();*/
-
   let citiesElement = document.querySelector(".clocks");
   citiesElement.innerHTML = `
   <div class="city">
