@@ -31,12 +31,21 @@ function updateTime() {
 }
 
 function updateCity(event) {
-  let cityTimeZone = moment().tz(event.target.value);
-  let cityTime = cityTimeZone.format("H:mm");
-  let cityDate = cityTimeZone.format("dddd Do, YYYY");
-  let cityName = event.target.value.replace("_", " ").split("/")[1];
-  let cityImage = event.target.value.split("/")[1].toLowerCase();
-  console.log(cityImage);
+  let cityTimeZone = event.target.value;
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+  }
+  let imgNames = ["new_york", "berlin", "london", "tokyo", "toronto", "paris"];
+  let cityTime = moment().tz(cityTimeZone).format("HH:mm:ss");
+  let cityDate = moment().tz(cityTimeZone).format("dddd Do, YYYY");
+  let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+
+  let cityImage = `clock`;
+  if (imgNames.includes(cityTimeZone.split("/")[1].toLowerCase())) {
+    cityImage = cityTimeZone.split("/")[1].toLowerCase();
+  }
+
+  /*cityTimeZone.split("/")[1].toLowerCase();*/
 
   let citiesElement = document.querySelector(".clocks");
   citiesElement.innerHTML = `
@@ -47,7 +56,9 @@ function updateCity(event) {
         <div class="monument">
           <img src="/images/${cityImage}.png" />
         </div>
-      </div>`;
+        
+      </div>
+      <div><a href="/">All Cities</a></div>`;
 }
 
 updateTime();
